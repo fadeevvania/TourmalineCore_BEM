@@ -1,0 +1,80 @@
+$DarkText: #131313;
+$LightText: #767676;
+$PurpleText: #753bbd;
+$BorderColor: #DDDDDD;
+
+%CardText_mob {
+    //styleName: 1mob;
+    font-family: Roboto;
+    color: $LightText;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+%CartDesc_mob {
+    //styleName: 3mob;
+    font-family: Roboto;
+    color: $DarkText;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+%CardSubText {
+    //styleName: 2;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.0313em;
+    text-align: left;
+    color: $DarkText;
+}
+
+%CardTitle {
+    //styleName: 4;
+    font-family: Roboto;
+    color: $DarkText;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: left;}
+
+%CardText {
+    //styleName: 1;
+    font-family: Roboto;
+    color: $DarkText;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+%CardSubText {
+    //styleName: 2;
+    font-family: Roboto;
+    color: $DarkText;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.0313em;
+    text-align: left;
+}
+
+%CardDesc {
+    //styleName: 3;
+    font-family: Roboto;
+    color: $DarkText;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+}

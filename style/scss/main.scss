@@ -1,0 +1,7 @@
+@import "./normalize";
+@import "./variables";
+
+.Test{
+    @extend %CardText_mob;
+    border: 2px dotted $PurpleText;
+}
