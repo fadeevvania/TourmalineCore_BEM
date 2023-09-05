@@ -3,9 +3,15 @@ $LightText: #767676;
 $PurpleText: #753bbd;
 $BorderColor: #DDDDDD;
 
+%HeaderText{
+    //styleName: 8;
+font-size: 14px;
+font-weight: 500;
+line-height: 18px;
+}
+
 %CardText_mob {
     //styleName: 1mob;
-    font-family: Roboto;
     color: $LightText;
     font-size: 18px;
     font-weight: 700;
@@ -16,7 +22,6 @@ $BorderColor: #DDDDDD;
 
 %CartDesc_mob {
     //styleName: 3mob;
-    font-family: Roboto;
     color: $DarkText;
     font-size: 10px;
     font-weight: 400;
@@ -27,7 +32,6 @@ $BorderColor: #DDDDDD;
 
 %CardSubText {
     //styleName: 2;
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
@@ -38,7 +42,6 @@ $BorderColor: #DDDDDD;
 
 %CardTitle {
     //styleName: 4;
-    font-family: Roboto;
     color: $DarkText;
     font-size: 46px;
     font-weight: 700;
@@ -48,7 +51,6 @@ $BorderColor: #DDDDDD;
 
 %CardText {
     //styleName: 1;
-    font-family: Roboto;
     color: $DarkText;
     font-size: 24px;
     font-weight: 700;
@@ -59,7 +61,6 @@ $BorderColor: #DDDDDD;
 
 %CardSubText {
     //styleName: 2;
-    font-family: Roboto;
     color: $DarkText;
     font-size: 16px;
     font-weight: 500;
@@ -70,7 +71,6 @@ $BorderColor: #DDDDDD;
 
 %CardDesc {
     //styleName: 3;
-    font-family: Roboto;
     color: $DarkText;
     font-size: 12px;
     font-weight: 400;

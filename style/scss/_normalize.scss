@@ -6,14 +6,37 @@
 *::after {
   box-sizing: border-box;
 }
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  src: local("Roboto"),
-       /* Если не получилось, загрузит woff2 */
-       url("/fonts/roboto.woff2") format("woff2"),
-       /* Если браузер не поддерживает woff2, загрузит woff */
-       url("/fonts/roboto.woff") format("woff");
+a, a:link, a:visited  {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover  {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+font-weight: inherit;
+}
+
+ul, ul li {
+list-style: none;
+}
+
+img {
+vertical-align: top;
+}
+
+img, svg {
+max-width: 100%;
+height: auto;
 }
 
 /**
@@ -31,6 +54,7 @@
 body,
 :where(blockquote, figure):where([class]) {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 /**

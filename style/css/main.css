@@ -2,17 +2,46 @@
 /**
  Нормализация блочной модели
 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  src: local("Roboto"), url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff");
+a, a:link, a:visited {
+  text-decoration: none;
+  color: black;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
 /**
   Убираем внутренние отступы слева тегам списков,
   у которых есть атрибут class
@@ -28,6 +57,7 @@
 body,
 :where(blockquote, figure):where([class]) {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 /**
@@ -114,13 +144,70 @@ body {
   }
 }
 .Test {
-  font-family: Roboto;
   color: #767676;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.Test {
+  color: #767676;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  border: 1px solid #DDDDDD;
+  height: revert;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  margin-left: 15px;
+}
+.header__items {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.header__buttons {
+  display: flex;
+  width: 60px;
+  height: 99%;
+  border-left: 1px solid #DDDDDD;
+}
+.header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: none;
+  cursor: pointer;
+}
+.header__links {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.header__link {
+  list-style: none;
+  margin: 20px 0;
+  border-bottom: 1px solid #131313;
+  width: 8rem;
+}
+.header .link-open {
+  height: 100%;
 }
 
 .Test {
