@@ -3,56 +3,100 @@
 @import "./variables";
 
 .header {
-  position: fixed;
-  width: 100%;
-  border: 1px solid $BorderColor;
-  height: revert;
+    position: fixed;
+    width: 100%;
+    border: 1px solid $BorderColor;
+    height: revert;
 
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    height: 60px;
-    margin-left: 15px;
-  }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 60px;
+        margin-left: 15px;
+    }
 
-  &__items {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-  }
+    &__items {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
 
-  &__buttons {
-    display: flex;
-    width: 60px;
-    height: 99%;
-    border-left: 1px solid $BorderColor;
-  }
+    &__buttons {
+        display: flex;
+        width: 60px;
+        height: 99%;
+        border-left: 1px solid $BorderColor;
+    }
 
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: none;
-    cursor: pointer;
-  }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: none;
+        cursor: pointer;
+    }
 
-  &__links {
-    height: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background-color: whitesmoke;
-  }
+    &__links {
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        background-color: whitesmoke;
+    }
 
-  &__link {
-    list-style: none;
-    margin: 20px 0;
-    border-bottom: 1px solid $DarkText;
-    width: 8rem;
-}
-.link-open {
-  height: 100%;
-}
+    &__link {
+        list-style: none;
+        margin: 20px 0;
+        border-bottom: 1px solid $DarkText;
+        width: 8rem;
+    }
+    .link-open {
+        height: 100%;
+    }
+
+    @media only screen and (min-width: 730px) {
+        .header {
+            height: 60px;
+            
+            &__nav {
+                width: 100%;
+                position: fixed;
+                justify-content: space-between;
+            }
+
+            &__items {
+                width: 60px;
+                margin-right: 16px;
+            }
+
+            &__buttons {
+            }
+
+            &__burger {
+                display: none;
+            }
+
+            &__btn {
+            }
+
+            &__links {
+                height: 60px;
+                background-color: white;
+                width: 100%;
+                display: block;
+                text-align: end;
+                cursor: pointer;
+
+            }
+
+            &__link {
+                font-size: 14px;
+                display: inline;
+                border-bottom: none;
+                margin-left: 20px;
+            }
+        }
+    }
 }

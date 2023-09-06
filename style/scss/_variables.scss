@@ -1,13 +1,13 @@
 $DarkText: #131313;
 $LightText: #767676;
 $PurpleText: #753bbd;
-$BorderColor: #DDDDDD;
+$BorderColor: #dddddd;
 
-%HeaderText{
-    //styleName: 8;
-font-size: 14px;
-font-weight: 500;
-line-height: 18px;
+%HeaderText {
+    color: $DarkText;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
 }
 
 %CardText_mob {
@@ -47,7 +47,8 @@ line-height: 18px;
     font-weight: 700;
     line-height: 46px;
     letter-spacing: 0em;
-    text-align: left;}
+    text-align: left;
+}
 
 %CardText {
     //styleName: 1;
