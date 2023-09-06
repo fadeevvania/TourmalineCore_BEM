@@ -1,0 +1,63 @@
+@import "./variables";
+
+.cards {
+    margin-top: 80px;
+    margin-left: 100px;
+    h1 {
+        @extend %HText;
+    }
+
+    &__list {
+        width: 875px;
+        margin-top: 80px;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $BorderColor;
+    }
+
+    &__text {
+        width: 535px;
+        height: 225px;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    &__title {
+        .title {
+            @extend %CardTitle;
+        }
+        .subTitle {
+            @extend %CardSubTitle;
+            margin-top: 5px;
+        }
+    }
+
+    &__elem {
+        display: flex;
+        object-fit: none;
+
+        img {
+            object-fit: none;
+        }
+        p {
+            padding-left: 10px;
+        }
+    }
+    &__desc {
+        margin-top: 45px;
+        .secondDesc {
+            padding-top: 15.5px;
+        }
+    }
+    &__img {
+        position: relative;
+        .specialImg {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}

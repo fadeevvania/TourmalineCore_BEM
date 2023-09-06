@@ -9,6 +9,11 @@
   margin: 0;
   padding: 0;
 }
+* html,
+*::before html,
+*::after html {
+  overflow-y: hidden;
+}
 
 a, a:link, a:visited {
   text-decoration: none;
@@ -151,13 +156,14 @@ body {
   font-weight: 700;
 }
 
-.cards h1 {
+.post h1, .cards h1 {
   color: #131313;
   font-size: 46px;
   font-weight: 700;
   line-height: 46px;
   letter-spacing: 0em;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .cards__title .title {
@@ -172,9 +178,40 @@ body {
 .cards__title .subTitle {
   color: #131313;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.post__title p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.post__subTitle {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #767676;
+}
+
+.post__elem p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
   text-align: left;
 }
 
@@ -184,13 +221,14 @@ body {
   font-weight: 700;
 }
 
-.cards h1 {
+.post h1, .cards h1 {
   color: #131313;
   font-size: 46px;
   font-weight: 700;
   line-height: 46px;
   letter-spacing: 0em;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .cards__title .title {
@@ -205,9 +243,40 @@ body {
 .cards__title .subTitle {
   color: #131313;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.post__title p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.post__subTitle {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #767676;
+}
+
+.post__elem p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
   text-align: left;
 }
 
@@ -275,13 +344,14 @@ body {
   font-weight: 700;
 }
 
-.cards h1 {
+.post h1, .cards h1 {
   color: #131313;
   font-size: 46px;
   font-weight: 700;
   line-height: 46px;
   letter-spacing: 0em;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .cards__title .title {
@@ -296,16 +366,46 @@ body {
 .cards__title .subTitle {
   color: #131313;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.post__title p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.post__subTitle {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.0313em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #767676;
+}
+
+.post__elem p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
   text-align: left;
 }
 
 .cards {
   margin-top: 80px;
   margin-left: 100px;
-  width: 1vh;
 }
 .cards__list {
   width: 875px;
@@ -313,12 +413,12 @@ body {
 }
 .cards__card {
   display: flex;
-  background-color: aliceblue;
   justify-content: space-between;
   border: 1px solid #dddddd;
 }
 .cards__text {
   width: 535px;
+  height: 225px;
   padding-left: 30px;
   padding-top: 30px;
 }
@@ -348,4 +448,60 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.post {
+  margin: 80px 100px 100px 100px;
+}
+.post_text {
+  padding: 80px;
+  padding-left: 84px;
+  background-color: #F3F3F3;
+}
+.post__post {
+  display: flex;
+  margin-top: 80px;
+  width: 100%;
+  height: 393px;
+}
+.post__title {
+  width: 100%;
+  display: flex;
+  height: 46px;
+  align-items: center;
+}
+.post__title .border {
+  width: 40px;
+  border-top: 3px solid #dddddd;
+  margin: 0px 17px 0px 17px;
+}
+.post__subTitle {
+  margin-top: 30px;
+}
+.post__elem {
+  display: flex;
+  width: 840px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+.post__elem img {
+  object-fit: none;
+}
+.post__elem p {
+  padding-left: 15px;
+}
+.post__elem p span {
+  color: #753bbd;
+}
+.post__elem .arrow1 {
+  padding-left: 10%;
+}
+.post__elem .arrow2 {
+  padding-left: 27%;
+}
+.post__rightLine {
+  height: 100%;
+  width: 40px;
+  background-color: #05C3DE;
 }/*# sourceMappingURL=main.css.map */

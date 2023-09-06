@@ -39,7 +39,7 @@ $BorderColor: #dddddd;
     color: $DarkText;
 }
 
-%CARDS {
+%HText {
     //styleName: 4;
     color: $DarkText;
     font-size: 46px;
@@ -47,6 +47,7 @@ $BorderColor: #dddddd;
     line-height: 46px;
     letter-spacing: 0em;
     text-align: left;
+    text-transform: uppercase;
 }
 
 %CardTitle {
@@ -63,10 +64,11 @@ $BorderColor: #dddddd;
     //styleName: 2;
     color: $DarkText;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 18px;
     letter-spacing: 0.0313em;
     text-align: left;
+    text-transform: uppercase;
 }
 
 %CardDesc {
@@ -77,4 +79,36 @@ $BorderColor: #dddddd;
     line-height: 14px;
     letter-spacing: 0em;
     text-align: left;
+}
+%ShowMeMore{
+ //styleName: 7;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0.0313em;
+text-align: left;
+text-transform: uppercase;
+}
+
+%PostSubTitle{
+    //styleName: 5;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 500;
+line-height: 22px;
+letter-spacing: 0.0313em;
+text-align: left;
+text-transform: uppercase;
+color: #767676;
+}
+
+%PostDesc{
+    //styleName: 6;
+font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: left;
 }
