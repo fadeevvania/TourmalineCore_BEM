@@ -1,8 +1,4 @@
 @import "./normalize";
 @import "./variables";
 @import "./header";
-
-.Test{
-    @extend %CardText_mob;
-    border: 2px dotted $PurpleText;
-}
+@import "./cards";
