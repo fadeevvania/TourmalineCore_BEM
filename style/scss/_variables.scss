@@ -48,6 +48,7 @@ $BorderColor: #dddddd;
     letter-spacing: 0em;
     text-align: left;
     text-transform: uppercase;
+    width: 100%;
 }
 
 %CardTitle {
@@ -111,4 +112,14 @@ font-weight: 700;
 line-height: 25px;
 letter-spacing: 0em;
 text-align: left;
+}
+%PostTitle_mob{
+    //styleName: 4mob;
+font-family: Roboto;
+font-size: 26px;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+
 }

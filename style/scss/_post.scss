@@ -1,12 +1,12 @@
 .post {
     margin: 80px 100px 100px 100px;
+    padding-bottom: 80px;
     h1 {
         @extend %HText;
     }
 
     &_text {
         padding: 80px;
-        padding-left: 84px;
         background-color: #f3f3f3;
     }
 
@@ -18,8 +18,7 @@
         margin-top: 80px;
         height: 393px;
         .postImg {
-            width: 504px;
-            height: 393px;
+            height: 100%;
         }
     }
 
@@ -53,7 +52,6 @@
             object-fit: none;
         }
         p {
-            @extend %PostDesc;
             padding-left: 15px;
         }
         p span {
@@ -72,4 +70,82 @@
         width: 40px;
         background-color: #05c3de;
     }
+}
+
+@media only screen and (max-width: 1640px) {
+    .post {
+        &_text {
+            padding: 80px 40px;
+        }
+        &__elem {
+            width: 450px;
+        }
+        img {
+        }
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .post {
+        &__post {
+            width: 40%;
+        }
+        &__rightImg {
+            display: none;
+        }
+    }
+    .postImg {
+        object-fit: none;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .post {
+        margin: 80px 10px 80px 10px;
+        &_text {
+            padding: 30px;
+            width: 100%;
+            .title {
+                font-family: Roboto;
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 26px;
+                letter-spacing: 0em;
+                text-align: left;
+                width: 100%;
+            }
+            .border{
+                display: none;
+            }
+            .showMore{
+               display: none; 
+            }
+        }
+
+        &__wrapper {
+        }
+        
+        &__post {
+            width: 100%;
+            height: 100% ;
+            .postImg {
+               display: none;
+            }
+        }
+
+        &__title {
+        }
+
+        &__subTitle {
+            margin-top: 10px;
+        }
+
+        &__elem {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        &__rightImg {
+            display: block;
+        }
+    }
+   
 }

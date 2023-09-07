@@ -164,6 +164,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .cards__title .title {
@@ -204,15 +205,6 @@ body {
   text-align: left;
   text-transform: uppercase;
   color: #767676;
-}
-
-.post__elem p {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 25px;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 .header li {
@@ -229,6 +221,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .cards__title .title {
@@ -269,15 +262,6 @@ body {
   text-align: left;
   text-transform: uppercase;
   color: #767676;
-}
-
-.post__elem p {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 25px;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 .header {
@@ -352,6 +336,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .cards__title .title {
@@ -392,15 +377,6 @@ body {
   text-align: left;
   text-transform: uppercase;
   color: #767676;
-}
-
-.post__elem p {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 25px;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 .cards {
@@ -492,6 +468,9 @@ body {
   }
 }
 @media only screen and (max-width: 730px) {
+  .cards {
+    margin-left: 10px;
+  }
   .cards__card {
     display: flex;
     flex-direction: column-reverse;
@@ -531,10 +510,10 @@ body {
 }
 .post {
   margin: 80px 100px 100px 100px;
+  padding-bottom: 80px;
 }
 .post_text {
   padding: 80px;
-  padding-left: 84px;
   background-color: #f3f3f3;
 }
 .post__post {
@@ -543,8 +522,7 @@ body {
   height: 393px;
 }
 .post__post .postImg {
-  width: 504px;
-  height: 393px;
+  height: 100%;
 }
 .post__title {
   width: 100%;
@@ -586,4 +564,65 @@ body {
   height: 100%;
   width: 40px;
   background-color: #05c3de;
+}
+
+@media only screen and (max-width: 1640px) {
+  .post_text {
+    padding: 80px 40px;
+  }
+  .post__elem {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .post__post {
+    width: 40%;
+  }
+  .post__rightImg {
+    display: none;
+  }
+  .postImg {
+    object-fit: none;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .post {
+    margin: 80px 10px 80px 10px;
+  }
+  .post_text {
+    padding: 30px;
+    width: 100%;
+  }
+  .post_text .title {
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 100%;
+  }
+  .post_text .border {
+    display: none;
+  }
+  .post_text .showMore {
+    display: none;
+  }
+  .post__post {
+    width: 100%;
+    height: 100%;
+  }
+  .post__post .postImg {
+    display: none;
+  }
+  .post__subTitle {
+    margin-top: 10px;
+  }
+  .post__elem {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .post__rightImg {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */
