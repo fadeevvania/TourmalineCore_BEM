@@ -10,12 +10,14 @@
     &__list {
         width: 875px;
         margin-top: 80px;
+       
     }
 
     &__card {
         display: flex;
         justify-content: space-between;
         border: 1px solid $BorderColor;
+       
     }
 
     &__text {
@@ -26,8 +28,13 @@
     }
 
     &__title {
+        cursor: pointer;
+        :hover{
+            color: $PurpleText
+        }
         .title {
             @extend %CardTitle;
+            
         }
         .subTitle {
             @extend %CardSubTitle;

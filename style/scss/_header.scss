@@ -8,6 +8,7 @@
     &__logo {
         width: 35px;
         height: 35px;
+        cursor: pointer;
     }
     &__wrapper {
         display: flex;
@@ -25,9 +26,15 @@
         gap: 20px;
         height: 60px;
         align-items: center;
+        :hover{
+            transform: scale(1.1);
+        }
     }
     li {
         @extend %HeaderText;
+        :hover{
+            color: $PurpleText;
+        }
     }
  
 
@@ -42,6 +49,10 @@
         text-align: center;
         display: flex;
         border-left: 1px solid $BorderColor;
+        cursor: pointer;
+        :hover{
+            transform: scale(1.1);
+        }
     }
 
     &__burger {
@@ -52,6 +63,9 @@
         width: 100%;
         height: 100%;
         object-fit: none;
+        :hover{
+            background: #000;;
+        }
     }
 }
 @media only screen and (max-width: 730px) {

@@ -273,6 +273,7 @@ body {
 .header__logo {
   width: 35px;
   height: 35px;
+  cursor: pointer;
 }
 .header__wrapper {
   display: flex;
@@ -290,6 +291,12 @@ body {
   height: 60px;
   align-items: center;
 }
+.header ul :hover {
+  transform: scale(1.1);
+}
+.header li :hover {
+  color: #753bbd;
+}
 .header__elem {
   display: flex;
   margin-left: 40px;
@@ -300,6 +307,10 @@ body {
   text-align: center;
   display: flex;
   border-left: 1px solid #dddddd;
+  cursor: pointer;
+}
+.header__buttons :hover {
+  transform: scale(1.1);
 }
 .header__burger {
   display: none;
@@ -308,6 +319,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: none;
+}
+.header__btn :hover {
+  background: #000;
 }
 
 @media only screen and (max-width: 730px) {
@@ -397,6 +411,12 @@ body {
   height: 225px;
   padding-left: 30px;
   padding-top: 30px;
+}
+.cards__title {
+  cursor: pointer;
+}
+.cards__title :hover {
+  color: #753bbd;
 }
 .cards__title .subTitle {
   margin-top: 5px;
@@ -525,10 +545,14 @@ body {
   height: 100%;
 }
 .post__title {
+  cursor: pointer;
   width: 100%;
   display: flex;
   height: 46px;
   align-items: center;
+}
+.post__title :hover {
+  color: #753bbd;
 }
 .post__title .border {
   width: 40px;
@@ -544,6 +568,7 @@ body {
   margin-top: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #dddddd;
+  cursor: pointer;
 }
 .post__elem img {
   object-fit: none;
