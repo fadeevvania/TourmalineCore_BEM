@@ -4,44 +4,61 @@
 *,
 *::before,
 *::after {
-  html { overflow-y: hidden; };
+  html {
+    overflow-y: hidden;
+  }
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-a, a:link, a:visited  {
+a,
+a:link,
+a:visited {
   text-decoration: none;
   color: black;
 }
 
-a:hover  {
+a:hover {
   text-decoration: none;
 }
 
 /* Common */
 
-aside, nav, footer, header, section, main {
-display: block;
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-size: inherit;
-font-weight: inherit;
+  font-weight: inherit;
 }
 
-ul, ul li {
-list-style: none;
-margin: 0;
-padding-left: 0;
+ul,
+ul li {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 img {
-vertical-align: top;
+  vertical-align: top;
 }
 
-img, svg {
-max-width: 100%;
-height: auto;
+img,
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
 /**
@@ -59,25 +76,14 @@ height: auto;
 body,
 :where(blockquote, figure):where([class]) {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /**
   Убираем внешние отступы вертикали нужным тегам,
   у которых есть атрибут class
  */
-:where(
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  ol,
-  dl
-):where([class]) {
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
 
