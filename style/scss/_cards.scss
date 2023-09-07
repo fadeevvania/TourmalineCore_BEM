@@ -53,11 +53,119 @@
         }
     }
     &__img {
+            display: flex;
+            height: 100%;
+        }
+        .imgCard {
+            width: 330px;
+        }
+        &__rightLine {
+            width: 10px;
+            background-color: $PurpleText;
+        }
+    &__img {
         position: relative;
+        border: none;
+        display: flex;
+
         .specialImg {
             position: absolute;
             left: 0;
             top: 0;
         }
+        .emptyImg {
+            opacity: 0;
+        }
+        .imgCard {
+            width: 330px;
+        }
+        &__rightLine {
+            width: 10px;
+            background-color: $PurpleText;
+        }
     }
 }
+@media only screen and (max-width: 992px) {
+    .cards {
+        &__img {
+            height: 227px;
+            .imgCard {
+                height: 100%;
+                object-fit: none;
+                width: 100%;
+            }
+        
+        }
+       
+
+        &__list {
+            width: auto;
+            margin-right: 80px;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}
+@media only screen and (max-width: 730px) {
+    .cards {
+        &__card {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__list {
+            width: 340px;
+            margin-right: 0;
+        }
+        &__text {
+            width: 100%;
+            .subTitle {
+                margin-top: 18px;
+            }
+        }
+     
+        .title {
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        &__desc {
+            margin-top: 30px;
+        }
+
+        &__img {
+            display: flex;
+            height: 100%;
+        }
+        .imgCard {
+            width: 330px;
+        }
+        &__rightLine {
+            width: 10px;
+            background-color: $PurpleText;
+        }
+    }
+}
+
+// 		&__desc {
+// 		}
+
+// 		&__elem {
+// 		}
+
+// }
+// .title {
+// }
+// .subTitle {
+// }
+// .secondDesc {
+// }
+// .specialImg {
+// }
+
+// }

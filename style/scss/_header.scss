@@ -29,11 +29,9 @@
     li {
         @extend %HeaderText;
     }
-    &__link {
-    }
+ 
 
-    &__items {
-    }
+    
     &__elem {
         display: flex;
         margin-left: 40px;
