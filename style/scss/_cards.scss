@@ -114,13 +114,21 @@
 @media only screen and (max-width: 730px) {
     .cards {
         margin-left: 10px;
+        margin-right: 10px;
+        &__wrapper{
+            align-items: center;
+            text-align: center;
+        }
         &__card {
             display: flex;
             flex-direction: column-reverse;
+           
         }
         &__list {
             width: 340px;
             margin-right: 0;
+            left: 0;
+            right: 0;
         }
         &__text {
             width: 100%;

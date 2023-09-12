@@ -15,7 +15,9 @@
   overflow-y: hidden;
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   text-decoration: none;
   color: black;
 }
@@ -25,16 +27,28 @@ a:hover {
 }
 
 /* Common */
-aside, nav, footer, header, section, main {
+aside,
+nav,
+footer,
+header,
+section,
+main {
   display: block;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-size: inherit;
   font-weight: inherit;
 }
 
-ul, ul li {
+ul,
+ul li {
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -44,7 +58,8 @@ img {
   vertical-align: top;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
   height: auto;
 }
@@ -71,16 +86,7 @@ body,
   Убираем внешние отступы вертикали нужным тегам,
   у которых есть атрибут class
  */
-:where(h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-dl):where([class]) {
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
 
@@ -490,6 +496,11 @@ body {
 @media only screen and (max-width: 730px) {
   .cards {
     margin-left: 10px;
+    margin-right: 10px;
+  }
+  .cards__wrapper {
+    align-items: center;
+    text-align: center;
   }
   .cards__card {
     display: flex;
@@ -498,6 +509,8 @@ body {
   .cards__list {
     width: 340px;
     margin-right: 0;
+    left: 0;
+    right: 0;
   }
   .cards__text {
     width: 100%;
@@ -532,6 +545,15 @@ body {
   margin: 80px 100px 100px 100px;
   padding-bottom: 80px;
 }
+.post__postImage {
+  display: flex;
+}
+.post__rightLine-post {
+  height: 100%;
+  width: 40px;
+  background-color: #05c3de;
+  display: none;
+}
 .post_text {
   padding: 80px;
   background-color: #f3f3f3;
@@ -543,6 +565,7 @@ body {
 }
 .post__post .postImg {
   height: 100%;
+  width: 100%;
 }
 .post__title {
   cursor: pointer;
@@ -585,6 +608,9 @@ body {
 .post__elem .arrow2 {
   padding-left: 27%;
 }
+.post .showButton {
+  display: none;
+}
 .post__rightLine {
   height: 100%;
   width: 40px;
@@ -600,8 +626,8 @@ body {
   }
 }
 @media only screen and (max-width: 1300px) {
-  .post__post {
-    width: 40%;
+  .post__rightLine-post {
+    display: block;
   }
   .post__rightImg {
     display: none;
@@ -611,7 +637,7 @@ body {
     background-color: #f3f3f3;
   }
   .postImg {
-    object-fit: none;
+    object-fit: cover;
   }
 }
 @media only screen and (max-width: 1100px) {
@@ -620,7 +646,6 @@ body {
   }
   .post_text {
     padding: 30px;
-    width: 100%;
   }
   .post_text .title {
     font-family: Roboto;
@@ -637,12 +662,15 @@ body {
   .post_text .showMore {
     display: none;
   }
+  .post__rightLine-post {
+    display: block;
+  }
   .post__post {
     width: 100%;
     height: 100%;
   }
-  .post__post .postImg {
-    display: none;
+  .post .postImg {
+    height: 100%;
   }
   .post__subTitle {
     margin-top: 10px;
@@ -651,7 +679,14 @@ body {
     width: 100%;
     margin-top: 20px;
   }
-  .post__rightImg {
+  .post .showButton {
     display: block;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid #dddddd;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
   }
 }/*# sourceMappingURL=main.css.map */
