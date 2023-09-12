@@ -115,14 +115,13 @@
     .cards {
         margin-left: 10px;
         margin-right: 10px;
-        &__wrapper{
+        &__wrapper {
             align-items: center;
             text-align: center;
         }
         &__card {
             display: flex;
             flex-direction: column-reverse;
-           
         }
         &__list {
             width: 340px;
