@@ -184,7 +184,7 @@ body {
 
 .cards__title .subTitle {
   color: #131313;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   letter-spacing: 0.0313em;
@@ -241,7 +241,7 @@ body {
 
 .cards__title .subTitle {
   color: #131313;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   letter-spacing: 0.0313em;
@@ -272,14 +272,14 @@ body {
 
 .header {
   display: flex;
-  width: 100%;
-  height: 60px;
+  max-width: 100%;
   border-bottom: 1px solid #dddddd;
 }
 .header__logo {
-  width: 35px;
-  height: 35px;
   cursor: pointer;
+}
+.header__links {
+  display: none;
 }
 .header__wrapper {
   display: flex;
@@ -290,15 +290,6 @@ body {
 }
 .header__items {
   display: flex;
-}
-.header ul {
-  display: flex;
-  gap: 20px;
-  height: 60px;
-  align-items: center;
-}
-.header ul :hover {
-  transform: scale(1.1);
 }
 .header li :hover {
   color: #753bbd;
@@ -318,9 +309,6 @@ body {
 .header__buttons :hover {
   transform: scale(1.1);
 }
-.header__burger {
-  display: none;
-}
 .header__btn {
   width: 100%;
   height: 100%;
@@ -330,102 +318,78 @@ body {
   background: #000;
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (min-width: 1024px) {
   .header__logo {
-    width: auto;
-    height: auto;
+    width: 35px;
+    height: 35px;
   }
   .header__links {
-    display: none;
-  }
-  .header__burger {
     display: block;
   }
+  .header__burger {
+    display: none;
+  }
+  .header ul {
+    display: flex;
+    gap: 20px;
+    height: 60px;
+    align-items: center;
+  }
+  .header ul :hover {
+    transform: scale(1.1);
+  }
 }
-.header li {
-  color: #131313;
-  font-size: 14px;
-  font-weight: 700;
+.cards {
+  margin-top: 121px;
+  display: flex;
 }
-
-.post h1, .cards h1 {
-  color: #131313;
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 46px;
-  letter-spacing: 0em;
-  text-align: left;
-  text-transform: uppercase;
+.cards h1 {
+  padding-left: 5%;
+  margin-bottom: 80px;
+}
+.cards .cards__cardLink:hover .cards__card {
+  border: 1px solid #753bbd;
+}
+.cards__wrapper {
   width: 100%;
 }
-
-.cards__title .title {
-  color: #131313;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-.cards__title .subTitle {
-  color: #131313;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0.0313em;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.post__title p {
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0.0313em;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.post__subTitle {
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 0.0313em;
-  text-align: left;
-  text-transform: uppercase;
-  color: #767676;
-}
-
-.cards {
-  margin-top: 80px;
-  margin-left: 100px;
-}
 .cards__list {
-  width: 875px;
-  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cards__cardLink {
+  display: flex;
+  justify-content: center;
 }
 .cards__card {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   border: 1px solid #dddddd;
+  width: 90%;
 }
 .cards__text {
-  width: 535px;
-  height: 225px;
-  padding-left: 30px;
-  padding-top: 30px;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 .cards__title {
+  cursor: pointer;
+  display: flex;
+  width: 90%;
+  flex-direction: column;
   cursor: pointer;
 }
 .cards__title :hover {
   color: #753bbd;
 }
 .cards__title .subTitle {
-  margin-top: 5px;
+  margin-top: 18px;
 }
 .cards__elem {
   display: flex;
@@ -439,16 +403,17 @@ body {
 }
 .cards__desc {
   margin-top: 45px;
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  cursor: pointer;
 }
 .cards__desc .secondDesc {
   padding-top: 15.5px;
+  padding-bottom: 20px;
 }
 .cards__img {
   display: flex;
-  height: 100%;
-}
-.cards .imgCard {
-  width: 330px;
 }
 .cards__rightLine {
   width: 10px;
@@ -468,79 +433,51 @@ body {
   opacity: 0;
 }
 .cards__img .imgCard {
-  width: 330px;
+  width: 100%;
 }
 .cards__img__rightLine {
   width: 10px;
   background-color: #753bbd;
 }
-
-@media only screen and (max-width: 992px) {
-  .cards__img {
-    height: 227px;
+@media only screen and (min-width: 768px) {
+  .cards .cards__img .imgCard {
+    object-fit: cover;
   }
-  .cards__img .imgCard {
-    height: 100%;
-    object-fit: none;
-    width: 100%;
-  }
-  .cards__list {
-    width: auto;
-    margin-right: 80px;
-  }
-  .cards__card {
+  .cards .cards__card {
     display: flex;
     flex-direction: row-reverse;
   }
 }
-@media only screen and (max-width: 730px) {
-  .cards {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .cards__wrapper {
-    align-items: center;
-    text-align: center;
-  }
-  .cards__card {
+@media only screen and (min-width: 1024px) {
+  .cards .cards {
     display: flex;
-    flex-direction: column-reverse;
   }
-  .cards__list {
-    width: 340px;
-    margin-right: 0;
-    left: 0;
-    right: 0;
+  .cards .cards__wrapper {
+    margin-left: 100px;
+    width: 50%;
+    display: flex;
   }
-  .cards__text {
+  .cards .cards__wrapper h1 {
+    padding-left: 0;
+  }
+  .cards .cards__list {
     width: 100%;
   }
-  .cards__text .subTitle {
-    margin-top: 18px;
+  .cards .cards__cardLink {
+    display: inline;
+    width: 100%;
   }
-  .cards .title {
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-  .cards__desc {
-    margin-top: 30px;
-  }
-  .cards__img {
+  .cards .cards__card {
     display: flex;
-    height: 100%;
+    flex-direction: row;
+    width: 100%;
   }
   .cards .imgCard {
-    width: 330px;
-  }
-  .cards__rightLine {
-    width: 10px;
-    background-color: #753bbd;
+    min-width: 330px;
+    object-fit: cover;
   }
 }
+
 .post {
   margin: 80px 100px 100px 100px;
   padding-bottom: 80px;
