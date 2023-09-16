@@ -360,6 +360,10 @@ body {
   margin-top: 121px;
   display: flex;
 }
+.cards .svg {
+  width: 195px;
+  height: 15px;
+}
 .cards h1 {
   padding-left: 5%;
   margin-bottom: 80px;
