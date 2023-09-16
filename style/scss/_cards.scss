@@ -1,8 +1,4 @@
-
 .cards {
-    svg{
-        width: ;
-    }
     margin-top: 121px;
     display: flex;
     h1 {
@@ -77,6 +73,7 @@
         width: 90%;
         flex-direction: column;
         cursor: pointer;
+
         .secondDesc {
             padding-top: 15.5px;
             padding-bottom: 20px;
@@ -85,8 +82,7 @@
     &__img {
         display: flex;
     }
-    .imgCard {
-    }
+    
     &__rightLine {
         width: 10px;
         background-color: $PurpleText;
@@ -125,12 +121,9 @@
                 display: flex;
                 flex-direction: row-reverse;
             }
-            &__title{
-                .title{
-                    
-                }
-
-                .subTitle{
+            &__title {
+                
+                .subTitle {
                     margin-top: 5px;
                 }
             }
@@ -145,7 +138,7 @@
         .cards {
             display: flex;
             &__wrapper {
-                h1{
+                h1 {
                     padding-left: 0;
                 }
                 margin-left: 100px;
@@ -166,117 +159,13 @@
                 display: flex;
                 flex-direction: row;
                 width: 100%;
-                min-width: 700px
+                min-width: 700px;
             }
-
-            &__text {
-            }
-
-            &__title {
-            }
-
-            &__desc {
-            }
-
-            &__elem {
-            }
-
-            &__img {
-            }
-
-            &__rightLine {
-            }
-        }
-        .title {
-        }
-        .subTitle {
-        }
-        .secondDesc {
         }
         .imgCard {
             min-width: 330px;
             object-fit: cover;
         }
-        .specialImg {
-        }
-        .emptyImg {
-        }
+       
     }
-
-    // @media only screen and (min-width: 992px) {
-    //     margin-top: 80px;
-    //     margin-left: 100px;
-    //     // &__list {
-    //     //     width: 875px;
-    //     //     margin-top: 0;
-    //     // }
-    //     &__card {
-    //         display: flex;
-    //         justify-content: space-between;
-    //         border: 1px solid $BorderColor;
-    //         width: 100%;
-    //     }
-    // }
-
-    // @media only screen and (max-width: 992px) {
-    //     &__img {
-    //         height: 227px;
-    //         .imgCard {
-    //             height: 100%;
-    //             object-fit: none;
-    //             width: 100%;
-    //         }
-    //     }
-
-    //     &__card {
-    //         display: flex;
-    //         flex-direction: row-reverse;
-    //     }
-    // }
-
-    // @media only screen and (max-width: 730px) {
-    //     margin-left: 10px;
-    //     margin-right: 10px;
-    //     &__wrapper {
-    //         align-items: center;
-    //         text-align: center;
-    //     }
-
-    //     // &__list {
-    //     //     width: 340px;
-    //     //     margin-right: 0;
-    //     //     left: 0;
-    //     //     right: 0;
-    //     // }
-    //     &__text {
-    //         width: 100%;
-    //         .subTitle {
-    //             margin-top: 18px;
-    //         }
-    //     }
-
-    //     .title {
-    //         font-family: Roboto;
-    //         font-size: 20px;
-    //         font-weight: 700;
-    //         line-height: 24px;
-    //         letter-spacing: 0em;
-    //         text-align: left;
-    //     }
-    //     &__desc {
-    //         margin-top: 30px;
-    //     }
-
-    //     &__img {
-    //         display: flex;
-    //         height: 100%;
-    //     }
-    //     .imgCard {
-    //         width: 330px;
-    //     }
-    //     &__rightLine {
-    //         width: 10px;
-    //         background-color: $PurpleText;
-    //     }
-    // }
 }
