@@ -1,175 +1,440 @@
 .post {
-    margin: 80px 100px 100px 100px;
-    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    h1 {
+        @extend %HText;
+    }
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        background: #f3f3f3;
+        align-items: center;
+    }
+    &__text-container {
+        width: 80%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 80px;
+        width: 90%;
+    }
+
+   
+
+    &__post {
+        display: flex;
+        margin-top: 80px;
+    }
 
     &__postImage {
         display: flex;
     }
 
     &__rightLine-post {
-        height: 100%;
-        width: 40px;
+        width: 15px;
         background-color: #05c3de;
-        display: none;
-    }
-    h1 {
-        @extend %HText;
-    }
-
-    &_text {
-        padding: 80px;
-        background-color: #f3f3f3;
-    }
-
-    &__post {
-        display: flex;
-        margin-top: 80px;
-        height: 393px;
-        .postImg {
-            height: 100%;
-            width: 100%;
-        }
     }
 
     &__title {
-        cursor: pointer;
+        margin-top: 30px;
         :hover {
             color: $PurpleText;
-        }
-        width: 100%;
-        display: flex;
-        height: 46px;
-        align-items: center;
-        .border {
-            width: 40px;
-            border-top: 3px solid $BorderColor;
-            margin: 0px 17px 0px 17px;
-        }
-        p {
-            @extend %ShowMeMore;
         }
     }
 
     &__subTitle {
-        @extend %PostSubTitle;
-        margin-top: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     &__elem {
         display: flex;
-        width: 840px;
-        margin-top: 30px;
-        padding-bottom: 20px;
+        justify-content: space-between;
         border-bottom: 1px solid $BorderColor;
-        cursor: pointer;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        align-items: flex-start;
+    }
 
-        img {
-            object-fit: none;
+    &__elem-left {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__rightImg {
+        display: none;
+    }
+
+}
+.postImg {
+    height: 300px;
+    max-width: 50px;
+    object-fit: cover;
+    height: 100%;
+}
+.title {
+    @extend %PostTitle_mob;
+}
+.subTitle {
+    @extend %PostSubTitle;
+}
+.Desc {
+    @extend %PostDesc;
+    padding-left: 15px;
+    span {
+        color: $PurpleText;
+    }
+}
+.Desc-lg {
+    display: none;
+}
+
+.showMore {
+    display: none;
+}
+
+.showButton {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 2px solid $BorderColor;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+    .post {
+        .postImg {
+            max-width: 100%;
         }
-        p {
-            padding-left: 15px;
+        &__rightLine-post {
+            display: none;
         }
-        p span {
-            color: $PurpleText;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .post {
+        align-items: inherit;
+        &_text {
+            width: 100%;
         }
-        .arrow1 {
-            padding-left: 10%;
+
+        &__wrapper {
+            margin-left: 100px;
+            width: 90%;
         }
-        .arrow2 {
-            padding-left: 27%;
+
+        &__text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
         }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        &__subTitle {
+            margin-top: 30px;
+        }
+
+        &__elem {
+            align-items: inherit;
+        }
+        &__elem-left {
+            align-items: inherit;
+        }
+
+        &__rightImg {
+            display: block;
+            object-fit: cover;
+        }
+
+        &__rightLine {
+            width: 40px;
+            background-color: #05c3de;
+        }
+    }
+
+    .title {
+        //styleName: 4;
+        color: $DarkText;
+        font-size: 46px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+    .border {
+        width: 40px;
+        border-top: 3px solid $BorderColor;
+        margin: 0px 17px 0px 17px;
+    }
+    .showMore {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .subTitle {
+        margin-top: 30px;
+    }
+
+    .Desc-lg {
+        display: block;
+    }
+    .Desc-sm {
+        display: none;
     }
     .showButton {
         display: none;
     }
-
-    &__rightLine {
-        height: 100%;
-        width: 40px;
-        background-color: #05c3de;
-    }
 }
 
-@media only screen and (max-width: 1640px) {
-    .post {
-        &_text {
-            padding: 80px 40px;
-        }
-        &__elem {
-            width: 450px;
-        }
-    }
-}
-@media only screen and (max-width: 1300px) {
-    .post {
-        &__rightLine-post {
-            display: block;
-        }
-        &__rightImg {
-            display: none;
-        }
-        &_text {
-            padding: 80px;
-            background-color: #f3f3f3;
-        }
-    }
-    .postImg {
-        object-fit: cover;
-    }
-}
+// .post {
+// padding-bottom: 80px;
+// &__postImage {
+//     display: flex;
+// }
 
-@media only screen and (max-width: 1100px) {
-    .post {
-        margin: 80px 10px 80px 10px;
+// &__rightLine-post {
+//     height: 100%;
+//     width: 40px;
+//     background-color: #05c3de;
+//     display: none;
+// }
+// h1 {
+//     @extend %HText;
+// }
 
-        &_text {
-            padding: 30px;
-            .title {
-                font-family: Roboto;
-                font-size: 26px;
-                font-weight: 700;
-                line-height: 26px;
-                letter-spacing: 0em;
-                text-align: left;
-                width: 100%;
-            }
-            .border {
-                display: none;
-            }
-            .showMore {
-                display: none;
-            }
-        }
-        &__rightLine-post {
-            display: block;
-        }
-        &__post {
-            width: 100%;
-            height: 100%;
-        }
-        .postImg {
-            height: 100%;
-        }
+// &_text {
+//     padding: 80px;
+//     width: 100%;
+//     background-color: #f3f3f3;
+// }
+// &__wrapper {
+//     width: 100%;
+// }
+// &__list {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+// }
+// &__post {
+//     display: flex;
+//     margin-top: 80px;
+//     height: 393px;
+//     .postImg {
+//         object-fit: none;
+//     }
+// }
 
-        &__subTitle {
-            margin-top: 10px;
-        }
+// &__title {
+//     cursor: pointer;
+//     :hover {
+//         color: $PurpleText;
+//     }
+//     width: 100%;
+//     display: flex;
+//     height: 46px;
+//     align-items: center;
+//     .border {
+//         width: 40px;
+//         border-top: 3px solid $BorderColor;
+//         margin: 0px 17px 0px 17px;
+//     }
+//     p {
+//         @extend %ShowMeMore;
+//     }
+// }
 
-        &__elem {
-            width: 100%;
-            margin-top: 20px;
-        }
+// &__subTitle {
+//     @extend %PostSubTitle;
+//     margin-top: 30px;
+// }
 
-        .showButton {
-            display: block;
-            padding: 20px;
-            margin-top: 20px;
-            border: 2px solid $BorderColor;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-    }
-}
+// &__elem {
+//     display: flex;
+
+//     margin-top: 30px;
+//     padding-bottom: 20px;
+//     border-bottom: 1px solid $BorderColor;
+//     cursor: pointer;
+//     img {
+//         object-fit: none;
+//     }
+//     p {
+//         padding-left: 15px;
+//     }
+//     p span {
+//         color: $PurpleText;
+//     }
+//     .arrow1 {
+//         padding-left: 10%;
+//     }
+//     .arrow2 {
+//         padding-left: 27%;
+//     }
+// }
+// .showButton {
+//     display: block;
+// }
+
+// &__rightLine {
+//     height: 100%;
+//     width: 40px;
+//     background-color: #05c3de;
+// }
+
+//     &_text {
+//     }
+
+//     &__wrapper {
+//     }
+
+//     &__list {
+//     }
+
+//     &__post {
+//     }
+
+//     &__postImage {
+//         display: flex;
+//         min-width: 50px;
+//         &__rightLine-post {
+//             display: block;
+//         }
+//     }
+
+//     &__rightLine-post {
+//     }
+
+//     &__title {
+//     }
+
+//     &__subTitle {
+//     }
+
+//     &__elem {
+//     }
+
+//     &__rightImg {
+//         display: none;
+//     }
+
+//     &__rightLine {
+//     }
+
+//     .postImg {
+//     }
+//     .title {
+//     }
+//     .border {
+//     }
+//     .showMore {
+//         display: none;
+//     }
+//     .arrow1 {
+//     }
+//     .arrow2 {
+//     }
+//     .showButton {
+//     }
+
+// }
+
+// @media only screen and (max-width: 1640px) {
+//     .post {
+//         &_text {
+//             padding: 80px 40px;
+//         }
+//         &__elem {
+//             width: 450px;
+//         }
+//     }
+// }
+// @media only screen and (max-width: 1300px) {
+//     .post {
+//         &__rightLine-post {
+//             display: block;
+//         }
+//         &__rightImg {
+//             display: none;
+//         }
+//         &_text {
+//             padding: 80px;
+//             background-color: #f3f3f3;
+//         }
+//     }
+//     .postImg {
+//         object-fit: cover;
+//     }
+// }
+
+// @media only screen and (max-width: 1100px) {
+//     .post {
+//         margin: 80px 10px 80px 10px;
+
+//         &_text {
+//             padding: 30px;
+//             .title {
+//                 font-family: Roboto;
+//                 font-size: 26px;
+//                 font-weight: 700;
+//                 line-height: 26px;
+//                 letter-spacing: 0em;
+//                 text-align: left;
+//                 width: 100%;
+//             }
+//             .border {
+//                 display: none;
+//             }
+//             .showMore {
+//                 display: none;
+//             }
+//         }
+//         &__rightLine-post {
+//             display: block;
+//         }
+//         &__post {
+//             width: 100%;
+//             height: 100%;
+//         }
+//         .postImg {
+//             height: 100%;
+//         }
+
+//         &__subTitle {
+//             margin-top: 10px;
+//         }
+
+//         &__elem {
+//             width: 100%;
+//             margin-top: 20px;
+//         }
+
+//         .showButton {
+//             display: block;
+//             padding: 20px;
+//             margin-top: 20px;
+//             border: 2px solid $BorderColor;
+//             text-align: center;
+//             text-transform: uppercase;
+//             font-size: 14px;
+//             font-weight: 700;
+//             cursor: pointer;
+//         }
+//     }
+// }

@@ -2,13 +2,14 @@
 
 .header {
     display: flex;
-    width: 100%;
-    height: 60px;
+    max-width: 100%;
     border-bottom: 1px solid $BorderColor;
     &__logo {
-        width: 35px;
-        height: 35px;
         cursor: pointer;
+        
+    }
+    &__links {
+        display: none;
     }
     &__wrapper {
         display: flex;
@@ -21,15 +22,7 @@
         display: flex;
     }
 
-    ul {
-        display: flex;
-        gap: 20px;
-        height: 60px;
-        align-items: center;
-        :hover {
-            transform: scale(1.1);
-        }
-    }
+    
     li {
         @extend %HeaderText;
         :hover {
@@ -52,31 +45,34 @@
             transform: scale(1.1);
         }
     }
-
-    &__burger {
-        display: none;
-    }
-
     &__btn {
         width: 100%;
         height: 100%;
         object-fit: none;
-        :hover {
-            background: #000;
-        }
+        
     }
 }
-@media only screen and (max-width: 730px) {
+@media only screen and (min-width: 1024px) {
     .header {
         &__logo {
-            width: auto;
-            height: auto;
+            width: 35px;
+            height: 35px;
         }
         &__links {
+            display: block;
+        }
+        
+        &__burger {
             display: none;
         }
-        &__burger {
-            display: block;
+        ul {
+            display: flex;
+            gap: 20px;
+            height: 60px;
+            align-items: center;
+            :hover {
+                transform: scale(1.1);
+            }
         }
     }
 }
